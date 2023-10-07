@@ -1,0 +1,27 @@
+.header {
+  align-items: center;
+  border-bottom: 1px solid #ecedec;
+  color: #546756;
+  display: flex;
+  flex-direction: row;
+  height: 83px;
+  justify-content: space-between;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+.header-link {
+  color: #546756;
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+.header-btn {
+  background-color: none;
+  border: none;
+  outline: none;
+  color: #546756;
+  margin: 0 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
