@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { apiUrl } from "../../../common/apiUrl";
-import "../../../styles/components/modules/BookAdd.scss";
+import "../../../styles/modules/BookAdd.scss";
 import Loading from "../../../components/Loading";
 const BookAdd = () => {
   const [formData, setFormData] = useState({

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Loading from "../../../components/Loading";
-import "../../../styles/components/modules/Register.scss";
+import "../../../styles/modules/Register.scss";
 import axios from "axios";
 import { apiUrl } from "../../../common/apiUrl";
 const Register = () => {
