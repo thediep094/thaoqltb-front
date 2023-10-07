@@ -3,8 +3,10 @@ import Loading from "../../../components/Loading";
 import "../../../styles/modules/Register.scss";
 import axios from "axios";
 import { apiUrl } from "../../../common/apiUrl";
+import { useNavigate } from "react-router-dom";
 const Register = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     fullname: "",
     username: "",
@@ -31,6 +33,7 @@ const Register = () => {
           localStorage.setItem("user", JSON.stringify(data.user));
           alert("Tao tai khoan thanh cong");
         }
+        navigate("/");
       } else {
         alert("Nhap dung dinh dang gmail");
       }
