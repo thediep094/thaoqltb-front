@@ -12,9 +12,11 @@ import {
 import { banChay } from "../../../data/banChay";
 import { DeCu } from "../../../data/DeCu";
 import { PhoBien } from "../../../data/PhoBien";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../../../styles/modules/GioiThieu.scss";
+import axios from "axios";
+import { apiImages, apiUrl } from "../../../common/apiUrl";
 const GioiThieu = () => {
   const [banChaySlide, setBanChaySlide] = useState(0);
   const [deCuSlide, setDeCuSlide] = useState(0);
@@ -32,6 +34,21 @@ const GioiThieu = () => {
       setBanChaySlide(banChay.length - 1);
     }
   };
+
+  const [books, setBooks] = useState([]);
+  const fetchData = async () => {
+    try {
+      const res = await axios.get(`${apiUrl}/book/getall?page=1&limit=20`);
+      const data = res.data;
+      if (res.status === 200) {
+        setBooks(data.data);
+      }
+    } catch (error) {}
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
     <>
@@ -64,7 +81,7 @@ const GioiThieu = () => {
           </div>
         </div>
         <div className="GioiThieu__phai">
-          {banChay.map((item, index) => {
+          {books.map((item, index) => {
             return (
               <div
                 className={
@@ -75,19 +92,24 @@ const GioiThieu = () => {
                 key={index}
               >
                 <img
-                  src={item.imgUrl || process.env.PUBLIC_URL + item.imgUrl}
+                  src={`${apiImages}/${item.images[0]}`}
                   alt=""
                   className="GioiThieu__phai--sildeitem--hinhnen"
                 />
                 <div className="Gioithieu__phai--sildeitem--thongtin">
                   <h1>Bán chạy</h1>
                   <p>Giảm giá tuần này</p>
-                  <img src={item.imgUrl} alt="" />
-                  <h2>{item.name}</h2>
-                  <h3>{item.tags.toString()}</h3>
-                  <Link to="/theloai">
+                  <img src={`${apiImages}/${item.images[0]}`} alt="" />
+                  <h2
+                    style={{
+                      textAlign: "center",
+                    }}
+                  >
+                    {item.name}
+                  </h2>
+                  <Link to={`/book/${item._id}`}>
                     <button className="GioiThieu__phai--sildeitem--giatien">
-                      {item.gia} VNĐ
+                      {item.price} VNĐ
                     </button>
                   </Link>
                 </div>
