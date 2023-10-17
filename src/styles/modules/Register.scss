@@ -27,12 +27,13 @@
   input {
     padding: 18px 20px 14px 24px;
     width: 100%;
+    border: 1px solid black;
   }
 }
 
 .form-btn {
-  background-color: #374639;
-  color: #d6ddc0;
+  background-color: var(--main-color);
+  color: #fff;
   cursor: pointer;
   font-size: 19px;
   letter-spacing: -0.19px;

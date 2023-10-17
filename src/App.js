@@ -17,8 +17,8 @@ function App() {
           <Route index path="/addbook" element={<BookAdd />} exact />
           <Route index path="/book/:id" element={<BookDetail />} exact />
 
-          <Route index path="/login" element={<Login />} exact />
-          <Route index path="/register" element={<Register />} exact />
+          <Route index path="/dangnhap" element={<Login />} exact />
+          <Route index path="/dangky" element={<Register />} exact />
         </Routes>
         <Footer />
       </BrowserRouter>
