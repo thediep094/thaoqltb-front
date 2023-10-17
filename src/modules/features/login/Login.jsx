@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     username: "",
     password: "",
@@ -19,7 +20,11 @@ const Login = () => {
 
   const fetchData = async () => {
     try {
-      if (formData.username || formData.password) {
+      // formData = {
+      //   username: "admin",
+      //   password: "admin"
+      // }
+      if (formData.username && formData.password) {
         const res = await axios.post(`${apiUrl}/auth/login`, formData);
         const data = res.data;
         if (res.status === 200) {

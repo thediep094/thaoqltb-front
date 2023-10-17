@@ -6,6 +6,7 @@ import Register from "./modules/features/register/Register";
 import Home from "./modules/features/home/Home";
 import BookAdd from "./modules/features/book-add/BookAdd";
 import BookDetail from "./modules/features/book-detail/BookDetail";
+import Footer from "./components/Footer";
 function App() {
   return (
     <>
@@ -19,6 +20,7 @@ function App() {
           <Route index path="/login" element={<Login />} exact />
           <Route index path="/register" element={<Register />} exact />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   );

@@ -1,7 +1,12 @@
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
   box-sizing: border-box;
-  background-color: #fffdf4;
-  font-family: Roboto, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --main-color: #6c5dd4;
 }
