@@ -52,7 +52,7 @@ const SachMoi = () => {
               <div className="SachMoi__trai__sach__thongtin__gia">
                 <h1>{books[0].price} VNĐ</h1>
                 <Link
-                  to="/theloai"
+                  to={`/book/${books[0]._id}`}
                   style={{
                     textDecoration: "none",
                   }}

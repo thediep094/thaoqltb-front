@@ -9,7 +9,6 @@ import {
   ThumbUpAlt,
 } from "@mui/icons-material";
 
-import { banChay } from "../../../data/banChay";
 import { DeCu } from "../../../data/DeCu";
 import { PhoBien } from "../../../data/PhoBien";
 import { useEffect, useState } from "react";
@@ -19,11 +18,10 @@ import axios from "axios";
 import { apiImages, apiUrl } from "../../../common/apiUrl";
 const GioiThieu = () => {
   const [banChaySlide, setBanChaySlide] = useState(0);
-  const [deCuSlide, setDeCuSlide] = useState(0);
   const bamNextSlide = () => {
-    if (banChaySlide < banChay.length - 1) {
+    if (banChaySlide < books.length - 1) {
       setBanChaySlide(banChaySlide + 1);
-    } else if (banChaySlide === banChay.length - 1) {
+    } else if (banChaySlide === books.length - 1) {
       setBanChaySlide(0);
     }
   };
@@ -31,7 +29,7 @@ const GioiThieu = () => {
     if (banChaySlide > 0) {
       setBanChaySlide(banChaySlide - 1);
     } else if (banChaySlide === 0) {
-      setBanChaySlide(banChay.length - 1);
+      setBanChaySlide(books.length - 1);
     }
   };
 
