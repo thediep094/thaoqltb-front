@@ -128,15 +128,6 @@ const GioiThieu = () => {
         <div className="GioiThieu__duoi__tren">
           <div className="GioiThieu__duoi--item">
             <div className="GioiThieu__duoi__item__trai">
-              <FlashOn className="GioiThieu__duoi__item__trai--icon" />
-            </div>
-            <div className="GioiThieu__duoi__item__phai">
-              <h1>Giao Hàng Nhanh</h1>
-              <p>Giao hàng tận nơi trong vòng 3h</p>
-            </div>
-          </div>
-          <div className="GioiThieu__duoi--item">
-            <div className="GioiThieu__duoi__item__trai">
               <GppGood className="GioiThieu__duoi__item__trai--icon" />
             </div>
             <div className="GioiThieu__duoi__item__phai">

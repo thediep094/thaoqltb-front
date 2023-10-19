@@ -33,6 +33,7 @@ const Header = () => {
       navigator("/");
     }
   }, [user, location, navigator]);
+
   return (
     <div className="ThanhMenu">
       <div className="ThanhMenu__trai">
@@ -48,6 +49,13 @@ const Header = () => {
       </div>
 
       <div className="ThanhMenu__phai">
+        {user?.role === "admin" && (
+          <Link to="/addbook" className="ThanhMenu__phai--dangky--icon">
+            <div className="ThanhMenu__phai--dangnhap">
+              <div className="ThanhMenu__phai--dangnhap__link">Add book</div>
+            </div>
+          </Link>
+        )}
         {user ? (
           <>
             <Link to="/giohang">

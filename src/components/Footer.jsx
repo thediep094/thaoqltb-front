@@ -26,11 +26,7 @@ const Footer = () => {
           <h1>50,672+</h1>
           <p>Số lượng sách</p>
         </div>
-        <div className="Footer__tren__item">
-          <StoreMallDirectory className="Footer__tren__item__icon" />
-          <h1>1,562</h1>
-          <p>Số cửa hàng</p>
-        </div>
+
         <div className="Footer__tren__item">
           <HistoryEdu className="Footer__tren__item__icon" />
           <h1>457</h1>
@@ -54,16 +50,8 @@ const Footer = () => {
             <img src={"/Logo.png"} alt="" />
             <div className="ThanhMenu__trai--ten">
               <h2>Bookoe</h2>
-              <p>Book Store 5 Chú Hề</p>
+              <p>Nhóm Thảo</p>
             </div>
-          </div>
-          <div className="Footer__duoi__trai__thongtin">
-            <p>
-              Bookoe là trang web mua bán sách online của Công ty công nghệ và
-              chất lượng cao 5 chú hề. Với Hề Captain là chủ tịch của công ty.
-              Công ty đã có 21 năm kinh nghiệm trong việc điều hành và mua bán
-              Bitcoin.
-            </p>
           </div>
         </div>
         <div className="Footer__duoi__giua">

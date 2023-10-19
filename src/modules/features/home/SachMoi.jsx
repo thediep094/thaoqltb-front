@@ -34,7 +34,7 @@ const SachMoi = () => {
             </p>
           </div>
           <div className="SachMoi__trai__sach">
-            <Link to="/theloai">
+            <Link to={`/book/${books[0]._id}`}>
               <div className="SachMoi__trai__sach__hinhanh">
                 <img src={`${apiImages}/${books[0].images[0]}`} alt="" />
               </div>
