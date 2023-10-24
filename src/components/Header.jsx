@@ -52,7 +52,7 @@ const Header = () => {
         {user?.role === "admin" && (
           <Link to="/addbook" className="ThanhMenu__phai--dangky--icon">
             <div className="ThanhMenu__phai--dangnhap">
-              <div className="ThanhMenu__phai--dangnhap__link">Add book</div>
+              <div className="ThanhMenu__phai--dangnhap__link">Thêm sách</div>
             </div>
           </Link>
         )}
